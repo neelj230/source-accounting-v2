@@ -10,7 +10,6 @@ import MagneticButton from "@/components/MagneticButton";
 import Parallax from "@/components/Parallax";
 import StaggerGrid from "@/components/StaggerGrid";
 import CTABanner from "@/components/CTABanner";
-import TestimonialCard from "@/components/TestimonialCard";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
 import { testimonials } from "@/lib/testimonials";
 
