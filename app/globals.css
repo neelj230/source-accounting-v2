@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #4A4A4A;
+  background-color: #F5F3EC;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
+  color: #1A1A1A;
+}
+
+/* Custom selection */
+::selection {
+  background-color: #2B3F36;
+  color: #F5F3EC;
+}
+
+/* Film grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("/images/noise.png");
+  background-repeat: repeat;
+  mix-blend-mode: hard-light;
+  opacity: 0.035;
+}
+
+/* Picture-frame border */
+.picture-frame {
+  position: fixed;
+  inset: 8px;
+  border: 1px solid rgba(43, 63, 54, 0.12);
+  pointer-events: none;
+  z-index: 9998;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .picture-frame {
+    inset: 4px;
+  }
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F3EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2B3F36;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1A2B22;
+}
+
+/* Marquee animation for badge strip */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Underline form inputs */
+.input-editorial {
+  border: none;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.2);
+  border-radius: 0;
+  background: transparent;
+  padding: 12px 0;
+  font-size: 1rem;
+  color: #1A1A1A;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  outline: none;
+}
+
+.input-editorial:focus {
+  border-bottom-color: #2B3F36;
+}
+
+.input-editorial::placeholder {
+  color: #8A8A7A;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
